@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Identity by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/Headshot_1_xs.jpg" alt="" /></span>
+							<h1>Obo Agboghidi</h1>
+							<p>Software Engineer</p>
+						</header>
+						<body>
+							<ul>
+								<button id="projects">Projects</button>
+								<button id="about">About</button>
+								<button>Experience</button>
+							</ul>
+							<div id="project-item" >
+								<article class="">
+									<div>
+										<h3>Myshifts.app</h3>
+										<p>FullStack Employee scheduling app. This app allows a user to track the start and end times of multiple empolyees
+										working shifts</p>
+										<p>Tech Stack: React.js, Redux, Django, Stripe API</p>
+										<a href="https://www.myshifts.app/"></a>
+									</div>
+									<div>
+										<h3>Umbrella</h3>
+										<p>Weather tracking app frontend. This app uses a react frontend to fetch 3rd party weather data</p>
+										<p>Tech Stack: React.js, HTML/CSS, Axios fetch</p>
+										<a href="https://github.com/oagboghi2/Umbrella-App">Umbrella git</a>
+									</div>
+								</article>
+							</div>
+							<div id="about-item">
+								<article class="">
+									<div>
+										<h3>About:</h3>
+										<p>I'm a software engineer with a focus on the MERN stack. (MongoDB, Express, react and Node.js). I also have some experience with pythong
+											, D3 visualizations and sleneium testing with Javascript
+										</p>
+										<p>I try to live an active lifestyle, looking for new things to do and environments to get into. I am a big believer in
+										pair programming and working closely with my peers. I strongly believe I can contribute a lot to the team. Thank you
+										for the opportunity. I hope to hear from you soon!</p>
+									</div>
+								</article>
+							</div>
+							<div id="about"></div>
+							<div id="Experience"></div>
+							
+						</body>
+						<footer>
+							<ul class="icons">
+								<li><a href="https://twitter.com/OboAgboghidi" class="fa-twitter">Twitter</a></li>
+								<li><a href="https://github.com/oagboghi2" class="fa-github">GitHub</a></li>
+								<li><a href="http://linkedin.com/in/obo-agboghidi" class="fa-linkedin">Linkedin</a></li>
+							</ul>
+						</footer>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+					let projects = document.getElementById("projects");
+					projects.addEventListener("click", toggleVisibility, null);
+				}
+
+				function toggleVisibility(id) {
+				let div = document.getElementById("project-item");
+				console.log(div)
+				div.style.display = div.style.display == "none" ? "block" : "none";
+}
+			</script>
+
+	</body>
+</html>
