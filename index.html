@@ -26,12 +26,12 @@
 						</header>
 						<body>
 							<ul>
-								<button id="projects">Projects</button>
-								<button id="about">About</button>
-								<button>Experience</button>
+								<button class="btn" id="projects">Projects</button>
+								<button class="btn"id="about">About</button>
+								<button class="btn" >Experience</button>
 							</ul>
 							<div id="project-item" >
-								<article class="">
+								<article class="article">
 									<div>
 										<h3>Myshifts.app</h3>
 										<p>FullStack Employee scheduling app. This app allows a user to track the start and end times of multiple empolyees
@@ -48,11 +48,11 @@
 								</article>
 							</div>
 							<div id="about-item">
-								<article class="">
+								<article class="article">
 									<div>
 										<h3>About:</h3>
 										<p>I'm a software engineer with a focus on the MERN stack. (MongoDB, Express, react and Node.js). I also have some experience with pythong
-											, D3 visualizations and sleneium testing with Javascript
+											, D3 visualizations and selenium testing with Javascript
 										</p>
 										<p>I try to live an active lifestyle, looking for new things to do and environments to get into. I am a big believer in
 										pair programming and working closely with my peers. I strongly believe I can contribute a lot to the team. Thank you
@@ -60,9 +60,16 @@
 									</div>
 								</article>
 							</div>
-							<div id="about"></div>
+							<div id="experience-item">
+								<article class="article">
+									<div>
+										<h3>Experience: </h3>
+										<p> IT Database/Analyst January 2011-August 2018
+										1815 North D St. San Bernardino CA (951) 897-8002</p>
+									</div>
+								</article>
+							</div>
 							<div id="Experience"></div>
-							
 						</body>
 						<footer>
 							<ul class="icons">
@@ -88,16 +95,30 @@
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-					let projects = document.getElementById("projects");
-					projects.addEventListener("click", toggleVisibility, null);
+					// let projects = document.getElementById("projects");
+					// projects.addEventListener("click", toggleVisibility, null);
+					// about.addEventListener("click", toggleVisibility, null);	
+
+					let btn = document.querySelectorAll(".btn")
+					let articles = document.getElementsByClassName("article");
+
+					for(let i = 0; i < articles.length; i++){
+						btn[i].addEventListener("click", function(){
+						articles[i].style.display = articles[i].style.display == "none" ? "block" : "none";
+					})
 				}
+			}
 
-				function toggleVisibility(id) {
-				let div = document.getElementById("project-item");
-				console.log(div)
-				div.style.display = div.style.display == "none" ? "block" : "none";
-}
+				
+
+
+				// function toggleVisibility(id) {
+				// 	let articles = document.getElementsByClassName("article");
+				// 	for(let i = 0; i < articles.length; i++){
+				// 		console.log(articles[i])
+				// 		articles[i].style.display = articles[i].style.display == "none" ? "block" : "none";
+				// 	}
+				// }
 			</script>
-
 	</body>
 </html>

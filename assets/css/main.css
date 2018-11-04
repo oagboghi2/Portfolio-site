@@ -946,6 +946,10 @@
 			opacity: 0;
 		}
 
+		.article {
+			display: none;
+		}
+
 /* Footer */
 
 	#footer {
